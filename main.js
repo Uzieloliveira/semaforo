@@ -42,7 +42,10 @@ var btn_Stop = document.querySelector('.break').addEventListener("click",()=>{
 
 
 var btn_Manual = document.querySelector('.manual').addEventListener("click", ()=>{
+
+    clearInterval(tmp);
     cont++;
+
         green.style = " background-color: rgba(2, 236, 2, 0.342); box-shadow: none;"
     while(cont>0){
         yellow.style = " background-color: yellow; box-shadow: 0 5px 15px 10px  rgba(255, 255, 0, 0.438);"
