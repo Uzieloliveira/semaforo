@@ -1,125 +1,72 @@
-
-/*--- Estilo Geral ---*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     height: 100vh;
     width: 100vw;
-    background-image: url('../img/transito.jpeg');
 }
 
 .main{
     height: 100%;
-    width: 65%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 auto;
     background-color: rgb(54, 53, 52);
 }
 
-
-
-/* corpo do semáforo */
-.container{
-    height: 80%;
-    width: 65%;
-    max-width: 250px;
-    max-height: 600px;
-    background-color: rgb(41, 38, 38);
-    border-radius: 100px;
-    border-style: outset;
+.main .container{
+    height: 550px;
+    width: 350px;
+    border: solid 2px rgb(27, 27, 27);
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    box-shadow: 0 0 10px 2px rgb(82, 78, 78);
     padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    background-color: rgb(43, 42, 42);
 }
 
-
-
-
-/* luzes */
-.container .circle{
-    width: 80%;
-    height: 30%;
+.main .container .circle{
+    height: 33.3%;
+    width: 50%;
     border-radius: 50%;
-    border: 2px solid;
-    transition: .2s;
-    
+    border: solid 1px;
+    transition: ease-in-out .5s;
 }
 
-.container #red{
-    background-color: rgba(255, 0, 0, 0.246);
+#yellow{
+    background-color: rgba(255, 255, 0, 0.363);
 }
 
-.container #yellow{
-    background-color: rgba(255, 255, 0, 0.26);
-   
+#red{
+    background-color: rgba(255, 0, 0, 0.418);
 }
 
-.container #green{
+#green{
     background-color: rgb(2, 236, 2);
-    box-shadow: 0 5px 15px 10px  rgba(30, 255, 0, 0.52);
+    box-shadow: 0 5px 15px 10px rgba(30, 255, 0, 0.52);
 }
 
-
-
-/* Estilo para os botões */
 .btns{
     height: auto;
-    width: 30%;
-    max-height: 90px;
+    margin-top: 20px;
     display: flex;
-    margin-top: 50px;
-    justify-content: space-around;    
+    gap: 20px;
 }
 
-.btn{
-    width: 30%;
-    color:white;
-    cursor: pointer;
+.btns button{
+    padding: 20px;
     font-size: 1.2rem;
-    text-transform: capitalize;
-    padding: 10px;
     border-radius: 5px;
     border-style: none;
-    background-color: rgb(13, 84, 248);
-}
-
-.btn:hover{
-    background-color: rgb(3, 64, 206)
-}
-
-
-/* Responsividade */
-@media (max-width: 800px){
-    .main{
-        height: 100%;
-        width: 100%;
-    }
-    .container{
-        height: 50%;
-        width: 40%;
-    }
-    .btns{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10%;
-    }
-    .btn{
-        width: 100%;
-        margin-top: 10px;
-    }
-    body{
-        height: 100vh;
-        width: 100vw;
-        background-image:none;
-    }
+    cursor: pointer;
+    background-color: rgb(0, 132, 255);
+    color: white;
 }
